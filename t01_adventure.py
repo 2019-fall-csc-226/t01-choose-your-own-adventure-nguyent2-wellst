@@ -1,6 +1,8 @@
 ######################################################################
-# Author: Scott Heggen       TODO: Change this to your names
-# Username: heggens               TODO: Change this to your usernames
+# Author: Thy H. Nguyen
+#         Taran Wells
+# Username: nguyent2
+#           wellst
 #
 # Assignment: T01: Choose Your Own Adventure
 #
@@ -67,9 +69,35 @@ if dead == True:
 
 #########################################################################################################
 # TODO Add your part of the story here. Keep in mind you may NOT be coming right after the example above.
+print()
+print("You stumble into the woods. There are three paths in front of you.")
+print()
+answer = input("Which direction do you want to go? [North/East/West] ")
+print()
+if answer == "North":
+    #Bad choice
+    print("You are being chased by wolves.")
+    print("Try to run away! Good luck!")
+    print()
+    sleep(delay*3)
+    print("Oh no. They caught you.")
+    dead = True
+elif answer == "West":
+    #Good choice
+    print("You stumbled into a clearing. \n You escape the woods.")
+    dead = False
+elif answer == "East":
+    #Neutral choice
+    print("The path leads you deeper into the woods.")
+    print("You are now lost.")
+else:
+    print("You can't think clearly. \n You sit there for eternity.")
+    dead = True
 
-
-
+if dead == True:
+    print("Seems like you made a poor decision.")
+    print("You have died!")
+    quit()
 # TODO Don't forget to check if your user is dead at the end of your chapter!
 
 
