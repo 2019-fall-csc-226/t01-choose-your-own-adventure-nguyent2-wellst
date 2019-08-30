@@ -80,9 +80,22 @@ if answer == "North":
     print("Try to run away! Good luck!")
     print()
     safe = input("How long do want to run? [1-10]")
-    if int(safe) >= 7:
-        print()
-        print("The wolves get tired of chasing you.")
+    if safe == int:
+        if int(safe) >= 7:
+            print()
+            print("The wolves get tired of chasing you.")
+        else:
+            print()
+            print("Oh no. They caught you.")
+            dead = True
+    elif safe == float:
+        if float(safe) >= 7.0:
+            print()
+            print("The wolves get tired of chasing you.")
+        else:
+            print()
+            print("Oh no. They caught you.")
+            dead = True
     else:
         print()
         print("Oh no. They caught you.")
