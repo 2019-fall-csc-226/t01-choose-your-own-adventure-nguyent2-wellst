@@ -79,13 +79,18 @@ if answer == "North":
     print("You are being chased by wolves.")
     print("Try to run away! Good luck!")
     print()
-    sleep(delay*3)
-    print("Oh no. They caught you.")
-    dead = True
+    safe = input("How long do want to run? [1-10]")
+    if int(safe) >= 7:
+        print()
+        print("The wolves get tired of chasing you.")
+    else:
+        print()
+        print("Oh no. They caught you.")
+        dead = True
 elif answer == "West":
     #Good choice
     print("You stumbled into a clearing. \n You escape the woods.")
-    dead = False
+
 elif answer == "East":
     #Neutral choice
     print("The path leads you deeper into the woods.")
